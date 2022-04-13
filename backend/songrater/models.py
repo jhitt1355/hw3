@@ -8,9 +8,11 @@ class User(models.Model):
     def __str__(self):
         return self.username
 
-class Artist(models.Model):
+class Rating(models.Model):
     artist = models.CharField(max_length=255)
     song = models.CharField(max_length= 255, primary_key= True, unique=True)
+    rating = models.CharField(max_length= 255)
 
     def __str__(self):
-        return self.song
+        return (self.song + " by " + self.artist)
+
