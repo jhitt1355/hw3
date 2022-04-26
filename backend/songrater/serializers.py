@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import User, Rating
+from .models import User, Rating, Song, BetterRating
 
 # The serializer translates a Todo object into a format that
 # can be stored in our database. We use the Todo model.
@@ -15,4 +15,17 @@ class RatingSerializer(serializers.ModelSerializer):
     model = Rating
     # The id is automatically created as a primary key by our Django model
     # and we can included it here as well.
-    fields = ('artist', 'song', 'rating')
+    fields = ('id','artist', 'song', 'rating')
+
+class BetterRatingSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = BetterRating
+    fields = ('id','username','artist', 'song','rating')
+
+
+class SongSerializer(serializers.ModelSerializer):
+  class Meta:
+    model = Song
+    # The id is automatically created as a primary key by our Django model
+    # and we can included it here as well.
+    fields = ('id','artist', 'song')

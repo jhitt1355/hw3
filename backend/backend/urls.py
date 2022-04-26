@@ -22,6 +22,8 @@ from songrater import views
 router = routers.DefaultRouter()
 router.register(r'users', views.UserView, 'user')
 router.register(r'ratings', views.RatingView, 'rating')
+router.register(r'songs', views.SongView, 'song') 
+router.register(r'betterratings', views.BetterRatingView, 'betterrating')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
