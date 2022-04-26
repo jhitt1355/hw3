@@ -58,7 +58,7 @@ MIDDLEWARE = [
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
-    'https://localhost:3000',
+    'https://localhost:4200',
     'https://hw4-frontend.web.app',
     'https://hw4-frontend.firebaseapp.com'
 ]
